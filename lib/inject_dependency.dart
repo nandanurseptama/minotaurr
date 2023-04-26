@@ -9,7 +9,6 @@ GetIt getIt = GetIt.instance;
   asExtension: false,
   initializerName: '\$Init',
   preferRelativeImports: true,
-  
 )
-void initDependency() => $Init(getIt);
+Future<void> initDependency() => $Init(getIt);
 

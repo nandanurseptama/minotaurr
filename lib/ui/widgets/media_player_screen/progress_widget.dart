@@ -6,10 +6,7 @@ import 'package:just_audio/just_audio.dart';
 
 class MediaPlayerProgressWidget extends StatefulWidget {
   final AudioPlayer audioPlayer;
-  final ValueChanged<Duration>? onChanged;
-  final ValueChanged<Duration>? onChangeEnd;
-  const MediaPlayerProgressWidget(
-      {super.key, this.onChanged, this.onChangeEnd, required this.audioPlayer});
+  const MediaPlayerProgressWidget({super.key, required this.audioPlayer});
 
   @override
   State<MediaPlayerProgressWidget> createState() =>
@@ -47,7 +44,7 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
   }
 
   void listenSongDurationFromAudioPlayer(Duration? duration) {
-    if (duration != null) {
+    if (duration != null && mounted) {
       setState(() {
         songsDuration = duration;
       });
@@ -56,7 +53,7 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
   }
 
   void listenSongPositionFromAudioPlayer(Duration? duration) {
-    if (duration != null) {
+    if (duration != null && mounted) {
       setState(() {
         songsPosition = duration;
       });
@@ -65,7 +62,7 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
   }
 
   void listenBufferedSongPosition(Duration? duration) {
-    if (duration != null) {
+    if (duration != null && mounted) {
       setState(() {
         bufferedPosition = duration;
       });
@@ -87,8 +84,10 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
         SliderTheme(
           data: _sliderThemeData.copyWith(
             thumbShape: HiddenThumbComponentShape(),
-            activeTrackColor: Theme.of(context).colorScheme.onPrimary,
-            inactiveTrackColor: Theme.of(context).colorScheme.onPrimaryContainer,
+            activeTrackColor: Theme.of(context).colorScheme.primary,
+            inactiveTrackColor:
+                Theme.of(context).colorScheme.outline,
+            
           ),
           child: ExcludeSemantics(
             child: Slider(
@@ -100,14 +99,15 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
                 setState(() {
                   _dragValue = value;
                 });
-                if (widget.onChanged != null) {
-                  widget.onChanged!(Duration(milliseconds: value.round()));
-                }
+                // if (widget.onChanged != null) {
+                //   widget.onChanged!(Duration(milliseconds: value.round()));
+                // }
               },
-              onChangeEnd: (value) {
-                if (widget.onChangeEnd != null) {
-                  widget.onChangeEnd!(Duration(milliseconds: value.round()));
-                }
+              onChangeEnd: (value) async{
+                // if (widget.onChangeEnd != null) {
+                //   widget.onChangeEnd!(Duration(milliseconds: value.round()));
+                // }
+                 await widget.audioPlayer.seek(Duration(milliseconds: value.round()));
                 _dragValue = null;
               },
             ),
@@ -116,6 +116,8 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
         SliderTheme(
           data: _sliderThemeData.copyWith(
             inactiveTrackColor: Colors.transparent,
+            activeTrackColor: Colors.purple,
+            thumbColor: Colors.purple
           ),
           child: Slider(
             min: 0.0,
@@ -126,14 +128,12 @@ class _MediaPlayerProgressWidgetState extends State<MediaPlayerProgressWidget> {
               setState(() {
                 _dragValue = value;
               });
-              if (widget.onChanged != null) {
-                widget.onChanged!(Duration(milliseconds: value.round()));
-              }
+              // if (widget.onChanged != null) {
+              //   widget.onChanged!(Duration(milliseconds: value.round()));
+              // }
             },
-            onChangeEnd: (value) {
-              if (widget.onChangeEnd != null) {
-                widget.onChangeEnd!(Duration(milliseconds: value.round()));
-              }
+            onChangeEnd: (value) async{
+             await widget.audioPlayer.seek(Duration(milliseconds: value.round()));
               _dragValue = null;
             },
           ),

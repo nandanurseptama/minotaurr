@@ -33,15 +33,49 @@ class MusicRepositoryImpl implements MusicRepository {
   Future<List<MusicModel>> getMusicByArtistName(
       {required String processId, required String artistName}) async {
     try {
-      var response =
-          await _restApiClient.get(_env.findMusicEndPoint, queryParameters: {
-        "media": "music",
-        "attribute": "artistTerm",
-        "explicit": true,
-        "entity": "song",
-        "term": artistName,
-        "limit": "5"
-      });
+      var response = await _restApiClient.get(_env.findMusicEndPoint,
+          queryParameters: {
+            "media": "music",
+            "attribute": "artistTerm",
+            "explicit": true,
+            "entity": "song",
+            "term": artistName,
+            "limit": "5"
+          },
+          options: Options(headers: {
+            "Request-Id": processId,
+          }));
+      var responseBody = jsonDecode(response.data ?? "{}");
+
+      if (responseBody['results'] == null) {
+        return [];
+      }
+      if ((responseBody['results'] as List).isEmpty) {
+        return [];
+      }
+      return (responseBody['results'] as List)
+          .map((e) => MusicModel.fromJson(e))
+          .toList();
+    } catch (e, trace) {
+      throw repositoryErrorHandler(err: e, processId: processId, trace: trace);
+    }
+  }
+
+  @override
+  Future<List<MusicModel>> findSongs(
+      {required String keyword, required String processId}) async {
+    try {
+      var response = await _restApiClient.get(_env.findMusicEndPoint,
+          queryParameters: {
+            "media": "music",
+            "explicit": true,
+            "entity": "song",
+            "term": keyword,
+            "limit": "20"
+          },
+          options: Options(headers: {
+            "Request-Id": processId,
+          }));
       var responseBody = jsonDecode(response.data ?? "{}");
 
       if (responseBody['results'] == null) {
