@@ -52,8 +52,9 @@ A music player app that. All content data from itunes API. So, basically the mus
 
 ## Screen Shoot
 <img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_light.png" width="270" height="570" alt="Home Light Screen">
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_light.png "Player Light Screen")
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_light.png "Player Light Screen with Bottom Sheet Playlist Shown")
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_dark.png "Home Dark Screen")
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_dark.png "Player Dark Screen")
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_dark.png "Player Dark Screen with Bottom Sheet Playlist Shown")
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_light.png" width="270" height="570" alt="Player Light Screen">
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_light.png" width="270" height="570" alt="Player Light Screen with Bottom Sheet Playlist Shown">
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/settings_light.png" width="270" height="570" alt="Settings Screen">
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_dark_.png" width="270" height="570" alt="Home Dark Screen">
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_dark_.png" width="270" height="570" alt="Player Dark Screen">
+<img src="https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_dark_.png" width="270" height="570" alt="Player Dark Screen with Bottom Sheet Playlist Shown">
