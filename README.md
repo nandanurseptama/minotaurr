@@ -52,7 +52,7 @@ A music player app that. All content data from itunes API. So, basically the mus
 
 ## Screen Shoot
 
-![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_light.pn =270x570 "Home Light Screen")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_light.png =270x570 "Home Light Screen")
 ![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_light.png "Player Light Screen")
 ![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_light.png "Player Light Screen with Bottom Sheet Playlist Shown")
 ![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_dark.png "Home Dark Screen")
