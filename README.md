@@ -52,9 +52,9 @@ A music player app that. All content data from itunes API. So, basically the mus
 
 ## Screen Shoot
 
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/home_light.jpg "Home Light Screen")
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/player_light.jpg "Player Light Screen")
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/player_playlist_light.jpg "Player Light Screen with Bottom Sheet Playlist Shown")
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/home_dark.jpg "Home Dark Screen")
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/player_dark.jpg "Player Dark Screen")
-![Alt text](https://github.com/nandanurseptama/minotaurr/tree/master/ss/player_playlist_dark.jpg "Player Dark Screen with Bottom Sheet Playlist Shown")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_light.jpg "Home Light Screen")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_light.jpg "Player Light Screen")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_light.jpg "Player Light Screen with Bottom Sheet Playlist Shown")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/home_dark.jpg "Home Dark Screen")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_dark.jpg "Player Dark Screen")
+![Alt text](https://raw.githubusercontent.com/nandanurseptama/minotaurr/master/ss/player_playlist_dark.jpg "Player Dark Screen with Bottom Sheet Playlist Shown")
