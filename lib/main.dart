@@ -18,7 +18,7 @@ class BlocObs extends BlocObserver {
   }
 }
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initDependency();
   Bloc.observer = BlocObs();
